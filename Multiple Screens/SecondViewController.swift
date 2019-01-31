@@ -9,22 +9,23 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var dataFromScreen1: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Once the screen is loaded in memory, present the data from screen1
+        if let text = dataFromScreen1 {
+            titleLabel.text = text
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func leaveScreen(_ sender: UIButton) {
+        dismiss(animated: true) {
+            print("Screen 2 was dimissed")
+        }
     }
-    */
-
 }

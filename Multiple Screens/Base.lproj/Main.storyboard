@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Go to Screen 2"/>
                                 <connections>
-                                    <segue destination="CeQ-WG-yhd" kind="show" id="3Ph-Xw-hBa"/>
+                                    <segue destination="CeQ-WG-yhd" kind="show" identifier="showScreen2" id="3Ph-Xw-hBa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,10 +59,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcd-gJ-AL2">
+                                <rect key="frame" x="321" y="78" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="leaveScreen:" destination="CeQ-WG-yhd" eventType="touchUpInside" id="TVs-pi-W6A"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LKk-e4-f1b"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="URO-2c-YrV" id="MnT-ob-KLf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ymy-E1-UH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
